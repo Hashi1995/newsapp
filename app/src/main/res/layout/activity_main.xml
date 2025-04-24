@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF8F8"
+    tools:context=".MainActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/topStoriesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Stories"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topStoriesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/topStoriesLabel"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/allNewsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All News"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/topStoriesRecyclerView"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/allNewsLabel"
+        android:orientation="horizontal" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/newsRecyclerView"
+        android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>
